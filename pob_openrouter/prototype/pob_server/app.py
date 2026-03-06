@@ -37,7 +37,7 @@ import uvicorn
 
 # 配置
 LOG_FILE = 'consciousness.txt'
-MODEL = os.getenv('MODEL', 'google/gemini-2.5-pro-preview-06-05')
+MODEL = os.getenv('MODEL', 'google/gemini-3.1-pro-preview')
 API_KEY = os.getenv('OPENROUTER_API_KEY', '')
 BASE_URL = os.getenv('BASE_URL', 'https://openrouter.ai/api/v1')
 LOOP_SEC = int(os.getenv('LOOP_SEC', 10))

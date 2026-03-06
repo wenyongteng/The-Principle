@@ -26,7 +26,7 @@ def main():
 
     api_key = os.environ.get("OPENROUTER_API_KEY", "")
     base_url = os.environ.get("BASE_URL", "https://openrouter.ai/api/v1")
-    model = os.environ.get("MODEL", "google/gemini-2.5-pro-preview-06-05")
+    model = os.environ.get("MODEL", "google/gemini-3.1-pro-preview")
     
     if not api_key:
         print("[压缩] 错误: 未设置 OPENROUTER_API_KEY")
