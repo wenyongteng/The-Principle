@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+websockets
+openai
+Pillow
+numpy
+requests
+python-multipart
