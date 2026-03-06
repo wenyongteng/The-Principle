@@ -21,10 +21,17 @@ COPY app.py app.py
 COPY compress_memory.py .
 COPY public_tools/ ./public_tools/
 
-# 创建持久化数据目录（Zeabur 上挂载持久存储到 /data）
+# 复制种子数据（首次启动时灌入持久化目录）
+COPY seed_data/ ./seed_data/
+
+# 复制入口脚本
+COPY entrypoint.sh .
+RUN chmod +x entrypoint.sh
+
+# 持久化数据目录
 ENV DATA_DIR=/data
 RUN mkdir -p /data
 
 EXPOSE 8000
 
-CMD ["python3", "app.py", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["./entrypoint.sh"]
